@@ -1252,27 +1252,38 @@
             const signature = document.getElementById('digital_signature').value;
             const signatureDate = document.getElementById('signature_date').value;
 
-            const subject = 'Booking Request - ' + name;
+            const formatDate = (d) => {
+                if (!d) return '';
+                const date = new Date(d + 'T00:00:00');
+                return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+            };
+
+            const subject = 'Booking Request from ' + name;
 
             const body = [
-                'NEW BOOKING REQUEST',
-                '===================',
+                'Hi,',
                 '',
-                'Name: ' + name,
-                'Date of Birth: ' + dob,
-                'Email: ' + email,
-                'Phone: ' + phone,
+                'I would like to book an appointment at Restore.',
                 '',
-                'Reason for Visit: ' + reason,
-                'Additional Details: ' + (comments || 'None'),
-                'Preferred Date: ' + preferredDate,
+                'My details:',
                 '',
-                'CONSENT',
-                '-------',
-                'Digital Signature: ' + signature,
-                'Date Signed: ' + signatureDate,
-                'Privacy & consent form agreed: Yes'
-            ].join('\n');
+                '  Name: ' + name,
+                '  Date of Birth: ' + formatDate(dob),
+                '  Email: ' + email,
+                '  Phone: ' + phone,
+                '',
+                '  Reason for visit: ' + reason,
+                comments ? '  Additional details: ' + comments : '',
+                '  Preferred date: ' + formatDate(preferredDate),
+                '',
+                'I have read and agreed to the Privacy & Consent Form.',
+                '',
+                'Signed: ' + signature,
+                'Date: ' + formatDate(signatureDate),
+                '',
+                'Kind regards,',
+                name
+            ].filter(line => line !== '').join('\n');
 
             window.location.href = 'mailto:restore.physio26@gmail.com'
                 + '?subject=' + encodeURIComponent(subject)
