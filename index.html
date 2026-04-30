@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restore - Specialist Pelvic Health Physiotherapy</title>
+    <!-- Google Fonts for Minimalist Vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Color Palette & Base Styles */
+        :root {
+            --bg-primary: #F7F5F2; /* Soft off-white */
+            --bg-secondary: #EBE5DF; /* Warm beige */
+            --text-main: #4A4541; /* Dark grey/brown */
+            --text-light: #7A736E;
+            --accent: #B09C8B; /* Muted taupe */
+            --border-color: #D3C9C1;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            background-color: var(--bg-secondary);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
+
+        /* Accreditations */
+        .accreditations {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .accreditations div {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Services List */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+
+        .female-only {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        /* MOT Section */
+        .mot-box {
+            background-color: var(--bg-secondary);
+            padding: 3rem;
+            border-radius: 8px;
+        }
+
+        .mot-box ul {
+            padding-left: 1.5rem;
+        }
+
+        /* Fees Section */
+        .fees-list {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .fees-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .fees-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Form Styles */
+        .booking-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: inherit;
+            background-color: var(--bg-primary);
+            box-sizing: border-box;
+        }
+
+        .consent-box {
+            background-color: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .consent-box h4 {
+            margin-top: 0;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .checkbox-group input {
+            margin-top: 0.3rem;
+        }
+
+        button {
+            background-color: var(--text-main);
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--accent);
+        }
+
+        /* Call to Action & Footer */
+        .cta-section {
+            text-align: center;
+            background-color: #fff;
+            padding: 4rem 2rem;
+            margin-top: 2rem;
+        }
+
+        footer {
+            background-color: var(--text-main);
+            color: var(--bg-primary);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--bg-secondary);
+            border-bottom-color: var(--bg-secondary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Restore</h1>
+        <p>Specialist Pelvic Health Physiotherapy</p>
+        
+        <div class="accreditations">
+            <div>HCPC Registered</div>
+            <div>CSP Registered</div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Services Section -->
+        <section id="services">
+            <h2 class="section-title">What do we offer?</h2>
+            <p class="female-only">We are a female-only clinic dedicated to your pelvic health.</p>
+            
+            <div class="services-grid">
+                <div class="service-item">Urinary incontinence</div>
+                <div class="service-item">Urine frequency & urgency</div>
+                <div class="service-item">Pelvic organ prolapse</div>
+                <div class="service-item">Pelvic pain</div>
+                <div class="service-item">Pregnancy related pelvic girdle pain (PGP)</div>
+                <div class="service-item">Dyspareunia (pain with intercourse)</div>
+                <div class="service-item">Pelvic floor dysfunction (weakness/tightness)</div>
+                <div class="service-item">Diastasis Recti (separation of abdominal muscle wall)</div>
+                <div class="service-item">Postnatal recovery</div>
+                <div class="service-item">Pelvic floor MOT (no symptoms)</div>
+            </div>
+        </section>
+
+        <!-- MOT Section -->
+        <section id="mot">
+            <div class="mot-box">
+                <h2 style="text-align: center; margin-bottom: 1.5rem;">What is a pelvic floor MOT assessment?</h2>
+                <p>Ever wonder if everything is functioning as it should be? Want to learn more about how your pelvis works?</p>
+                <p>This is a one-off specialist session designed for women who don’t currently experience symptoms but want to take a proactive approach to their pelvic health.</p>
+                <p>Many pelvic health issues develop over a long period of time, and can be prevented. A pelvic floor MOT allows you to understand how your pelvic floor is functioning now, and what you can do to maintain long term health, as well as prevent future problems.</p>
+                
+                <h4 style="margin-top: 2rem;">What this session includes:</h4>
+                <ul>
+                    <li>Internal vaginal examination to assess your pelvic floor</li>
+                    <li>Identifying any early signs of weakness, tension or dysfunction</li>
+                    <li>Core strength assessment</li>
+                    <li>Personalised advice/treatment plans tailored to your lifestyle</li>
+                </ul>
+                <p><em>Most women only need a single session, with no ongoing treatment required.</em></p>
+            </div>
+        </section>
+
+        <!-- Fees Section -->
+        <section id="fees">
+            <h2 class="section-title">Fees</h2>
+            <ul class="fees-list">
+                <li><span>Initial assessment (1 hour 30 minutes)</span> <strong>£90</strong></li>
+                <li><span>Initial assessment pelvic floor MOT only (1 hour)</span> <strong>£80</strong></li>
+                <li><span>Follow up (30 minutes)</span> <strong>£60</strong></li>
+                <li><span>Extended follow up (45 minutes)</span> <strong>£75</strong></li>
+            </ul>
+        </section>
+
+        <!-- Booking & Consent Form Section -->
+        <section id="booking">
+            <h2 class="section-title">Book an Appointment</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Appointments are currently available on <strong>Wednesdays only (09:30 - 17:00)</strong>.</p>
+            
+            <!-- Note: Action URL needs to be set up to receive the form data safely -->
+            <form class="booking-form" action="YOUR_SECURE_ENDPOINT_HERE" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">What is the main reason you are coming to physiotherapy?</label>
+                    <select id="reason" name="reason" required>
+                        <option value="" disabled selected>Please select an option...</option>
+                        <option value="Urinary incontinence">Urinary incontinence</option>
+                        <option value="Urine frequency & urgency">Urine frequency & urgency</option>
+                        <option value="Pelvic organ prolapse">Pelvic organ prolapse</option>
+                        <option value="Pelvic pain">Pelvic pain</option>
+                        <option value="Pregnancy related pelvic girdle pain (PGP)">Pregnancy related pelvic girdle pain (PGP)</option>
+                        <option value="Dyspareunia">Dyspareunia (pain with intercourse)</option>
+                        <option value="Pelvic floor dysfunction">Pelvic floor dysfunction (weakness/tightness)</option>
+                        <option value="Diastasis Recti">Diastasis Recti (separation of abdominal muscle wall)</option>
+                        <option value="Mixed symptoms">Mixed symptoms</option>
+                        <option value="Other">Other (please detail below)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Other comments / Details</label>
+                    <textarea id="comments" name="comments" rows="3"></textarea>
+                </div>
+
+                <!-- Preferred Date (JS to restrict to Wednesdays can be added) -->
+                <div class="form-group">
+                    <label for="appointment_date">Preferred Wednesday Date</label>
+                    <input type="date" id="appointment_date" name="appointment_date" required>
+                </div>
+
+                <!-- Privacy & Consent Form -->
+                <div class="consent-box">
+                    <h4>Privacy & Consent Form</h4>
+                    <p><strong>🔹 Your Privacy Matters</strong><br>
+                    We respect your privacy. Your personal and sensitive health information (including pelvic health details, medical history, and treatment notes) is collected and stored securely to provide safe, effective physiotherapy.</p>
+                    
+                    <p><strong>Why we collect your information:</strong><br>
+                    - Provide personalised pelvic health assessment and treatment<br>
+                    - Manage appointments and communicate with you<br>
+                    - Maintain accurate and secure clinical records</p>
+                    
+                    <p><strong>How we protect your information:</strong><br>
+                    - Records are securely stored electronically and/or on paper<br>
+                    - Only your physiotherapist has access to your information<br>
+                    - Data will not be shared without your consent, except when legally required or necessary for your care</p>
+                    
+                    <p><strong>Your rights:</strong><br>
+                    - Access your records and request corrections<br>
+                    - Withdraw consent or request deletion (where legally allowed)<br>
+                    - Ask questions about how your data is used</p>
+                    
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
+                    
+                    <p><strong>🔹 Consent to Treatment & Data Use</strong><br>
+                    I understand that Restore will collect and store sensitive personal and health information relevant to pelvic health physiotherapy. I consent to:</p>
+                    <ul>
+                        <li>Pelvic health assessment and treatment (including internal assessment if required)</li>
+                        <li>Collection, storage, and use of sensitive health information for my care</li>
+                        <li>Use of my information for appointment management, clinical records, and follow-up</li>
+                    </ul>
+                    <p>I understand that my information will be kept confidential, stored securely, and will not be shared without my consent unless legally required. I can request access to my records or withdraw consent at any point.</p>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent_check" name="consent_check" required>
+                        <label for="consent_check" style="font-weight: normal; margin: 0;">I have read and agree to the Privacy & Consent Form. I type my full name below as my digital signature.</label>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <label for="digital_signature">Client Signature (Type Full Name)</label>
+                        <input type="text" id="digital_signature" name="digital_signature" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signature_date">Date</label>
+                        <input type="date" id="signature_date" name="signature_date" required>
+                    </div>
+                </div>
+
+                <button type="submit">Submit Booking Request</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="cta-section">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">Still not sure if pelvic health physio is right for you?</h2>
+        <p style="max-width: 600px; margin: 0 auto 1.5rem;">If you have questions about the pelvic health physiotherapy process or you want to know more about the services we offer, why not request a free call back.</p>
+        <p style="max-width: 600px; margin: 0 auto;">Our physiotherapists can offer a free 5-minute voice call to discuss any questions you may have, including which appointment type and which physiotherapist to choose.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>Location</h4>
+                <p>The Healthcare Hub<br>
+                63 Taff Street<br>
+                Pontypridd<br>
+                CF37 4TD<br>
+                Wales</p>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p>Phone: <a href="tel:07429564579">07429564579</a><br>
+                Email: <a href="mailto:restore.physio26@gmail.com">restore.physio26@gmail.com</a></p>
+            </div>
+            <div>
+                <h4>Appointment & Cancellation Policy</h4>
+                <p style="font-size: 0.9rem; color: var(--border-color);">Please give at least 24 hours’ notice if you need to cancel or reschedule. Late cancellations (less than 24 hours) or no-shows will incur a fee for the full session cost. Emergencies or sudden illness are exceptions—please let us know as soon as possible.</p>
+            </div>
+        </div>
+        <div style="margin-top: 3rem; font-size: 0.8rem; color: var(--border-color);">
+            &copy; 2026 Restore - Specialist Pelvic Health Physiotherapy. All rights reserved. <br>
+            HCPC & CSP Registered.
+        </div>
+    </footer>
+
+    <!-- Optional JS to restrict date picker to Wednesdays -->
+    <script>
+        const dateInput = document.getElementById('appointment_date');
+        
+        dateInput.addEventListener('input', function(e){
+            const day = new Date(this.value).getUTCDay();
+            if([1, 2, 4, 5, 6, 0].includes(day)){
+                e.preventDefault();
+                this.value = '';
+                alert('Appointments are only available on Wednesdays. Please select a Wednesday.');
+            }
+        });
+    </script>
+</body>
+</html>
