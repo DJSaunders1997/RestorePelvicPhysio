@@ -164,12 +164,12 @@ nav.scrolled {
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 1200px;
     position: relative;
 }
 
 .hero-logo {
-    max-width: clamp(280px, 50vw, 500px);
+    width: clamp(360px, 90vw, 1100px);
     height: auto;
     margin-bottom: 3rem;
     border-radius: 12px;

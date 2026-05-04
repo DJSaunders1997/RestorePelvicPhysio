@@ -52,10 +52,9 @@
         <div class="hero-content">
             <img src="images/restore-logo.jpg" alt="Restore - Specialist Pelvic Physiotherapy" class="hero-logo">
             <div class="hero-buttons">
-                <a href="#booking" class="hero-cta">Book an Appointment</a>
-                <a href="https://www.instagram.com/restore.pelvic.physio/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                <a href="https://www.instagram.com/restore.pelvic.physio/" target="_blank" rel="noopener noreferrer" class="hero-cta">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-                    Follow on Instagram
+                    Message us on Instagram
                 </a>
             </div>
         </div>
@@ -191,118 +190,13 @@
         <div class="section-inner">
             <p class="section-label fade-up">Get Started</p>
             <h2 class="section-title fade-up">Book an Appointment</h2>
-            <p class="section-subtitle fade-up">Appointments are available on <strong>Wednesdays, 09:30 &ndash; 17:00</strong>.</p>
-
-            <!-- TODO: Replace mailto handler with a proper form service (e.g. Formspree, Formsubmit)
-                 so submissions go directly to restore.physio26@gmail.com without needing the user's email client -->
-            <form class="booking-form fade-up" id="booking-form">
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" id="dob" name="dob" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" id="phone" name="phone" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="reason">What is the main reason you are coming to physiotherapy?</label>
-                    <select id="reason" name="reason" required>
-                        <option value="" disabled selected>Please select an option...</option>
-                        <option value="Urinary incontinence">Urinary incontinence</option>
-                        <option value="Urine frequency & urgency">Urine frequency & urgency</option>
-                        <option value="Pelvic organ prolapse">Pelvic organ prolapse</option>
-                        <option value="Pelvic pain">Pelvic pain</option>
-                        <option value="Pregnancy related pelvic girdle pain (PGP)">Pregnancy related pelvic girdle pain (PGP)</option>
-                        <option value="Dyspareunia">Dyspareunia (pain with intercourse)</option>
-                        <option value="Pelvic floor dysfunction">Pelvic floor dysfunction (weakness/tightness)</option>
-                        <option value="Diastasis Recti">Diastasis Recti (separation of abdominal muscle wall)</option>
-                        <option value="Mixed symptoms">Mixed symptoms</option>
-                        <option value="Other">Other (please detail below)</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="comments">Additional Details</label>
-                    <textarea id="comments" name="comments" rows="3" placeholder="Any other information you'd like us to know..."></textarea>
-                </div>
-
-                <!-- Preferred Date (JS restricts to Wednesdays) -->
-                <div class="form-group">
-                    <label for="appointment_date">Preferred Wednesday</label>
-                    <input type="date" id="appointment_date" name="appointment_date" required>
-                </div>
-
-                <!-- Privacy & Consent Form -->
-                <div class="consent-box">
-                    <h4>Privacy & Consent</h4>
-
-                    <strong>Your Privacy Matters</strong>
-                    <p>We respect your privacy. Your personal and sensitive health information (including pelvic health details, medical history, and treatment notes) is collected and stored securely to provide safe, effective physiotherapy.</p>
-
-                    <strong>Why we collect your information:</strong>
-                    <ul>
-                        <li>Provide personalised pelvic health assessment and treatment</li>
-                        <li>Manage appointments and communicate with you</li>
-                        <li>Maintain accurate and secure clinical records</li>
-                    </ul>
-
-                    <strong>How we protect your information:</strong>
-                    <ul>
-                        <li>Records are securely stored electronically and/or on paper</li>
-                        <li>Only your physiotherapist has access to your information</li>
-                        <li>Data will not be shared without your consent, except when legally required or necessary for your care</li>
-                    </ul>
-
-                    <strong>Your rights:</strong>
-                    <ul>
-                        <li>Access your records and request corrections</li>
-                        <li>Withdraw consent or request deletion (where legally allowed)</li>
-                        <li>Ask questions about how your data is used</li>
-                    </ul>
-
-                    <strong>Consent to Treatment & Data Use</strong>
-                    <p>I understand that Restore will collect and store sensitive personal and health information relevant to pelvic health physiotherapy. I consent to:</p>
-                    <ul>
-                        <li>Pelvic health assessment and treatment (including internal assessment if required)</li>
-                        <li>Collection, storage, and use of sensitive health information for my care</li>
-                        <li>Use of my information for appointment management, clinical records, and follow-up</li>
-                    </ul>
-                    <p>I understand that my information will be kept confidential, stored securely, and will not be shared without my consent unless legally required. I can request access to my records or withdraw consent at any point.</p>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="consent_check" name="consent_check" required>
-                        <label for="consent_check">I have read and agree to the Privacy & Consent Form. I type my full name below as my digital signature.</label>
-                    </div>
-
-                    <div class="form-row" style="margin-top: 1rem;">
-                        <div class="form-group">
-                            <label for="digital_signature">Digital Signature (Full Name)</label>
-                            <input type="text" id="digital_signature" name="digital_signature" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="signature_date">Date</label>
-                            <input type="date" id="signature_date" name="signature_date" required>
-                        </div>
-                    </div>
-                </div>
-
-                <button type="submit" class="btn-submit">Submit Booking Request</button>
-            </form>
+            <p class="section-subtitle fade-up">Online booking coming soon. In the meantime, send us a message on Instagram to book.</p>
+            <div class="booking-coming-soon fade-up" style="text-align:center; margin-top:2rem;">
+                <a href="https://www.instagram.com/restore.pelvic.physio/" target="_blank" rel="noopener noreferrer" class="instagram-link" style="display:inline-flex; align-items:center; gap:0.5rem;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                    Message us on Instagram
+                </a>
+            </div>
         </div>
     </section>
 
