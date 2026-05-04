@@ -170,7 +170,9 @@ nav.scrolled {
 
 .hero-logo {
     width: clamp(360px, 90vw, 1100px);
-    height: auto;
+    height: clamp(150px, 32vw, 340px);
+    object-fit: cover;
+    object-position: center 55%;
     margin-bottom: 3rem;
     border-radius: 12px;
 }
