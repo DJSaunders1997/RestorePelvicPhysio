@@ -290,6 +290,21 @@ section {
     background: var(--white);
 }
 
+/* About Section */
+.about-container {
+    max-width: 700px;
+}
+
+.about-text h2 {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
 /* Services Section */
 .services-grid {
     display: grid;
