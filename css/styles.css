@@ -467,6 +467,21 @@ section {
     white-space: nowrap;
 }
 
+/* Booking Embed */
+.booking-embed {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+}
+
+.booking-embed iframe {
+    display: block;
+    border: 0;
+}
+
 /* Booking Section */
 .booking-form {
     max-width: 700px;
