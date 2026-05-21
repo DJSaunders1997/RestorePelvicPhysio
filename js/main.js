@@ -25,3 +25,23 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         document.querySelector('.nav-links').classList.remove('open');
     });
 });
+
+// Active nav link on scroll
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const sections = [];
+navLinks.forEach(link => {
+    const id = link.getAttribute('href').substring(1);
+    const section = document.getElementById(id);
+    if (section) sections.push({ el: section, link: link });
+});
+
+const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const match = sections.find(s => s.el === entry.target);
+        if (match) {
+            match.link.classList.toggle('active', entry.isIntersecting);
+        }
+    });
+}, { threshold: 0, rootMargin: '-50% 0px -50% 0px' });
+
+sections.forEach(s => navObserver.observe(s.el));
