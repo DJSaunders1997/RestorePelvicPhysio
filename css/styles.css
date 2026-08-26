@@ -50,10 +50,26 @@ img {
     height: auto;
 }
 
+/* Moving location banner */
+.moving-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    padding: 0.55rem 2rem;
+    font-size: 0.82rem;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
 /* Navigation */
 nav {
     position: fixed;
-    top: 0;
+    top: 2.2rem;
     left: 0;
     right: 0;
     z-index: 100;
@@ -151,7 +167,7 @@ nav.scrolled {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 8rem 2rem 6rem;
+    padding: 10.2rem 2rem 6rem;
     background: linear-gradient(160deg, var(--bg-secondary) 0%, var(--bg-primary) 50%, var(--bg-dark) 100%);
     position: relative;
     overflow: hidden;
@@ -876,7 +892,11 @@ footer a:hover {
 
     .hero {
         min-height: 85vh;
-        padding: 7rem 1.5rem 4rem;
+        padding: 9.2rem 1.5rem 4rem;
+    }
+
+    .moving-banner {
+        font-size: 0.78rem;
     }
 
     .hero-accreditations {
