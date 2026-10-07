@@ -49,9 +49,9 @@
         </div>
     </nav>
 
-    <!-- Moving location notice -->
+    <!-- New location notice -->
     <div class="moving-banner">
-        We're moving! Our last day at The Healthcare Hub is 17th September. A new location is coming soon - follow us on <a href="https://www.instagram.com/restore.pelvic.physio/" target="_blank" rel="noopener noreferrer">Instagram</a> or <a href="https://www.facebook.com/profile.php?id=61589265807035" target="_blank" rel="noopener noreferrer">Facebook</a> for updates.
+        We've moved! You can now find us at the Welsh Institute of Chiropractic, University of South Wales, Treforest Campus. <a href="#booking">Book online</a> or follow us on <a href="https://www.instagram.com/restore.pelvic.physio/" target="_blank" rel="noopener noreferrer">Instagram</a> for updates.
     </div>
 
     <!-- Hero -->
@@ -239,7 +239,10 @@
         <div class="section-inner">
             <p class="section-label fade-up">Appointments</p>
             <h2 class="section-title fade-up">Book Online</h2>
-            <p class="section-subtitle fade-up">We're moving to a new location! In the meantime, message us on <a href="https://www.instagram.com/restore.pelvic.physio/" target="_blank" rel="noopener noreferrer">Instagram</a> or <a href="https://www.facebook.com/profile.php?id=61589265807035" target="_blank" rel="noopener noreferrer">Facebook</a> to book your appointment.</p>
+            <p class="section-subtitle fade-up">Select a service and choose a time that suits you.</p>
+            <div class="booking-embed fade-up">
+                <iframe id="cliniko-1921426" src="https://restore.uk3.cliniko.com/bookings?embedded=true" frameborder="0" scrolling="auto" width="100%" height="1000" style="pointer-events: auto;"></iframe>
+            </div>
         </div>
     </section>
 
@@ -247,7 +250,7 @@
     <section class="cta-section" id="contact">
         <div class="fade-up">
             <h2>Get in touch</h2>
-            <p>Get in touch using any of the options below to book your appointment.</p>
+            <p>You can <a href="#booking">book online</a>, or get in touch using any of the options below.</p>
             <p>We also offer a free 5-minute call to discuss any questions you may have, including which appointment type is right for you.</p>
             <div class="cta-contact">
                 <a href="tel:07429564579">
@@ -291,11 +294,11 @@
                 <p class="section-label">Find Us</p>
                 <h2>Visit the Clinic</h2>
                 <address>
-                    The Healthcare Hub<br>
-                    63 Taff Street<br>
-                    Pontypridd<br>
-                    CF37 4TD<br>
-                    Wales
+                    Welsh Institute of Chiropractic<br>
+                    University of South Wales<br>
+                    Treforest Campus<br>
+                    Rhondda Cynon Taf<br>
+                    CF37 1DL
                 </address>
                 <div class="location-contact">
                     <a href="tel:07429564579">07429 564 579</a>
@@ -304,11 +307,11 @@
             </div>
             <div class="location-map">
                 <iframe
-                    src="https://www.google.com/maps?q=63+Taff+Street,+Pontypridd+CF37+4TD,+UK&output=embed"
+                    src="https://www.google.com/maps?q=Welsh+Institute+of+Chiropractic,+Llantwit+Road,+Treforest,+Pontypridd+CF37+1DL&output=embed"
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
-                    title="Restore clinic location - The Healthcare Hub, 63 Taff Street, Pontypridd">
+                    title="Restore clinic location - Welsh Institute of Chiropractic, University of South Wales, Treforest">
                 </iframe>
             </div>
         </div>
@@ -319,11 +322,11 @@
         <div class="footer-grid">
             <div>
                 <h4>Location</h4>
-                <p>The Healthcare Hub<br>
-                63 Taff Street<br>
-                Pontypridd<br>
-                CF37 4TD<br>
-                Wales</p>
+                <p>Welsh Institute of Chiropractic<br>
+                University of South Wales<br>
+                Treforest Campus<br>
+                Rhondda Cynon Taf<br>
+                CF37 1DL</p>
             </div>
             <div>
                 <h4>Contact</h4>
@@ -359,6 +362,19 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cliniko Booking Widget -->
+    <script type="text/javascript">
+      window.addEventListener('message', function handleIFrameMessage (e) {
+        var clinikoBookings = document.getElementById('cliniko-1921426');
+        if (typeof e.data !== 'string') return;
+        if (e.data.search('cliniko-bookings-resize') > -1) {
+          var height = Number(e.data.split(':')[1]);
+          clinikoBookings.style.height = height + 'px';
+        }
+        e.data.search('cliniko-bookings-page') > -1 && clinikoBookings.scrollIntoView();
+      });
+    </script>
 
     <script src="js/main.js"></script>
 </body>
