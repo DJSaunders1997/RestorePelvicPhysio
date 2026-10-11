@@ -731,7 +731,20 @@ textarea:focus {
     font-size: 1.05rem;
     line-height: 2;
     color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.location-map-link {
+    display: inline-block;
     margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.location-map-link:hover {
+    color: var(--accent-dark);
 }
 
 .location-info .location-contact {
